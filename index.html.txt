@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nazeer Ali Public School App</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2b6cb0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      background-color: #2b6cb0;
+      color: white;
+      text-align: center;
+      padding: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav {
+      background: #1e4d8b;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: transparent;
+      color: white;
+      border: 0;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+    section {
+      padding: 16px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nazeer Ali Public School</h1>
+    <div>Milak Saijna</div>
+  </header>
+
+  <nav>
+    <button onclick="show('home')">Home</button>
+    <button onclick="show('notices')">Notices</button>
+    <button onclick="show('videos')">Videos</button>
+    <button onclick="show('about')">About</button>
+  </nav>
+
+  <section id="home" class="card">
+    <h2>स्वागत है 👋</h2>
+    <p>यह Nazeer Ali Public School का आधिकारिक ऐप है।</p>
+  </section>
+
+  <section id="notices" class="card" style="display:none">
+    <h2>Notice Board</h2>
+    <p>यहाँ स्कूल के नोटिस दिखेंगे।</p>
+  </section>
+
+  <section id="videos" class="card" style="display:none">
+    <h2>School Videos</h2>
+    <p>यहाँ स्कूल के प्रोग्राम्स की वीडियो दिखाई जाएगी।</p>
+  </section>
+
+  <section id="about" class="card" style="display:none">
+    <h2>About School</h2>
+    <p>Nazeer Ali Public School, Milak Saijna — गुणवत्तापूर्ण शिक्षा का केंद्र।</p>
+  </section>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

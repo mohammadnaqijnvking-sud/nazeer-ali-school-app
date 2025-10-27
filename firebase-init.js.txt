@@ -1,0 +1,22 @@
+// firebase-init.js
+// 1) Firebase की web-config नीचे डालें (Console → Project settings → Add app → Web app)
+// 2) इस फाइल को same folder में रखें (index.html इसमें refer करता है)
+
+const firebaseConfig = {
+  apiKey: "REPLACE_API_KEY",
+  authDomain: "REPLACE_PROJECT_ID.firebaseapp.com",
+  projectId: "REPLACE_PROJECT_ID",
+  storageBucket: "REPLACE_PROJECT_ID.appspot.com",
+  messagingSenderId: "REPLACE_SENDER_ID",
+  appId: "REPLACE_APP_ID"
+};
+
+// Initialize Firebase (compat mode used in index.html)
+firebase.initializeApp(firebaseConfig);
+
+// Shortcuts for use in console if needed
+window.__firebase = {
+  auth: firebase.auth(),
+  db: firebase.firestore(),
+  storage: firebase.storage()
+};
